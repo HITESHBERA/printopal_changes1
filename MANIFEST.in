@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include printopal_changes *.css
+recursive-include printopal_changes *.csv
+recursive-include printopal_changes *.html
+recursive-include printopal_changes *.ico
+recursive-include printopal_changes *.js
+recursive-include printopal_changes *.json
+recursive-include printopal_changes *.md
+recursive-include printopal_changes *.png
+recursive-include printopal_changes *.py
+recursive-include printopal_changes *.svg
+recursive-include printopal_changes *.txt
+recursive-exclude printopal_changes *.pyc
