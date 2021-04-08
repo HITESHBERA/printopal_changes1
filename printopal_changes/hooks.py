@@ -11,6 +11,13 @@ app_color = "grey"
 app_email = "nomi9639@gmail.com"
 app_license = "MIT"
 
+
+jenv = {
+	"methods":[
+		"get_tax_breakup_for_cgst_sgst:printopal_changes.utils.get_tax_breakup_for_cgst_sgst"
+	]
+}
+
 # Includes in <head>
 # ------------------
 
