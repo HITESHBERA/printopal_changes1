@@ -12,7 +12,7 @@ def get_tax_breakup_for_cgst_sgst(doc):
 		for tax in doc.items:
 			if tax.item_tax_template and tax.item_tax_rate:
 				tax_rate = json.loads(tax.item_tax_rate)
-				rate = sum(int(val) for key,val in tax_rate.items())
+				rate = sum(float(val) for key,val in tax_rate.items())
 				if not rate in taxes:
 					taxes[rate] = 0
 				taxes[rate] += 	tax.amount
@@ -32,3 +32,11 @@ def get_tax_breakup_for_cgst_sgst(doc):
 			tax_breakups.append(temp)
 
 	return tax_breakups
+
+def get_item_gst_value(item):
+	rate = 0
+	if item.item_tax_template and item.item_tax_rate:
+		tax_rate = json.loads(item.item_tax_rate)
+		rate = sum(float(val) for key,val in tax_rate.items())
+
+	return int(rate) if rate else 0

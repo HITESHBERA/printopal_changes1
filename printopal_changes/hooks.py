@@ -14,7 +14,8 @@ app_license = "MIT"
 
 jenv = {
 	"methods":[
-		"get_tax_breakup_for_cgst_sgst:printopal_changes.utils.get_tax_breakup_for_cgst_sgst"
+		"get_tax_breakup_for_cgst_sgst:printopal_changes.utils.get_tax_breakup_for_cgst_sgst",
+		"get_item_gst_value:printopal_changes.utils.get_item_gst_value"
 	]
 }
 
